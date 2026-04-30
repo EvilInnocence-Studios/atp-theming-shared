@@ -1,3 +1,4 @@
+import { IStyleFontInput, IStyleVar } from "@theming/components/Style/Style";
 import { ITheme as IThemeDef, IThemeSerialized as IThemeDefSerialized } from "@theming/lib/layout/layout";
 import { NewObj } from "../../core-shared/express/types";
 
@@ -6,6 +7,12 @@ export declare interface ITheme {
     name: string;
     description: string;
     imageUrl: string | null;
+    globalStyles?: {
+        variables: IStyleVar[];
+        fonts?: IStyleFontInput[];
+        sass: string | null;
+        css: string | null;
+    };
     json: IThemeDef | null;
     enabled: boolean;
 }
