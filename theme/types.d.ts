@@ -23,6 +23,7 @@ export declare interface IThemeSerialized {
     name: string;
     description: string;
     imageUrl: string | null;
+    globalStyles?: IGlobalStyles | null;
     json: IThemeDefSerialized | null;
     enabled: boolean;
 }
